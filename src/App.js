@@ -1,14 +1,17 @@
-import {useState} from "react"
+import { useState } from "react"
 
 function App() {
   //count, setCount
-  const [count, setCount] = useState(0);  
+  const [count, setCount] = useState(0);
 
   return (
-  <>
-    <h1> Contador: {count} </h1>
-    <button>+</button>
-  </>
+    <div>
+      <h1> Contador: {count} </h1>
+      <div className="buttons">
+        <button className="minus" onClick={() => { setCount(count - 1) }}>+</button>
+        <button className="plus" onClick={() => { setCount(count + 1) }}>+</button>
+      </div>
+    </div>
   );
 }
 
