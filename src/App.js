@@ -1,8 +1,19 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 function App() {
   //count, setCount
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(
+    ()=>{
+      const save = localStorage.getItem("value");
+      return save ? parseInt(save):0;
+    }
+  );
+
+  useEffect(
+    ()=>{
+      localStorage.setItem("value", count)
+    }
+  );
 
   const handleMinusCLick = () => {setCount(count - 1)};
   const handlePlusClick = () => {setCount(count + 1)};
