@@ -6,9 +6,9 @@ function App() {
 
   return (
     <div>
-      <h1> Contador: {count} </h1>
+      <h1> {count} </h1>
       <div className="buttons">
-        <button className="minus" onClick={() => { setCount(count - 1) }}>+</button>
+        <button className="minus" onClick={() => { setCount(count - 1) }}>-</button>
         <button className="plus" onClick={() => { setCount(count + 1) }}>+</button>
       </div>
     </div>
