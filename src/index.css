@@ -1,3 +1,14 @@
+div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.buttons{
+  display: flex;
+  flex-direction: row;
+}
+
 body {
   margin: 0;
 font-family: sans-serif;
@@ -5,9 +16,17 @@ font-family: sans-serif;
 
 button{
   padding: 0.5rem 1.5rem;
+  margin: 0.1rem;
   font-size: 2rem;
   border: 0;
   color: white;
-  border-radius: 5px;
-  background-color: rgb(90, 198, 90);
+  border-radius: 30%;
+}
+
+button.plus{
+ background-color: rgb(90, 198, 90);
+}
+
+button.minus{
+ background-color: rgb(196, 35, 35);
 }
