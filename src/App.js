@@ -4,12 +4,15 @@ function App() {
   //count, setCount
   const [count, setCount] = useState(0);
 
+  const handleMinusCLick = () => {setCount(count - 1)};
+  const handlePlusClick = () => {setCount(count + 1)};
+
   return (
     <div>
       <h1> {count} </h1>
       <div className="buttons">
-        <button className="minus" onClick={() => { setCount(count - 1) }}>-</button>
-        <button className="plus" onClick={() => { setCount(count + 1) }}>+</button>
+        <button className="minus" onClick={handleMinusCLick}>-</button>
+        <button className="plus" onClick={handlePlusClick}>+</button>
       </div>
     </div>
   );
